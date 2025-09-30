@@ -1,0 +1,124 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8" />
+  <title>Iniciar sesión</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <style>
+    body {
+      font-family: 'Segoe UI', Arial, sans-serif;
+      background: linear-gradient(135deg, #f5f7fa 0%, #c3cfe2 100%);
+      min-height: 100vh;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+    }
+    .container {
+      background: #fff;
+      padding: 32px 28px 24px 28px;
+      border-radius: 16px;
+      box-shadow: 0 8px 32px rgba(60,60,120,0.12);
+      max-width: 370px;
+      width: 100%;
+    }
+    h2 {
+      text-align: center;
+      margin-bottom: 24px;
+      color: #2d3a4b;
+      letter-spacing: 1px;
+    }
+    .err {
+      background: #ffe8e8;
+      border: 1px solid #f00;
+      color: #900;
+      padding: 10px;
+      border-radius: 8px;
+      margin-bottom: 16px;
+      text-align: center;
+    }
+    form {
+      display: flex;
+      flex-direction: column;
+      gap: 16px;
+    }
+    label {
+      font-size: 15px;
+      color: #2d3a4b;
+      margin-bottom: 4px;
+      font-weight: 500;
+    }
+    input {
+      padding: 10px 12px;
+      border-radius: 8px;
+      border: 1px solid #c3cfe2;
+      font-size: 15px;
+      transition: border 0.2s;
+    }
+    input:focus {
+      border: 1.5px solid #4f8cff;
+      outline: none;
+    }
+    .row {
+      display: flex;
+      gap: 10px;
+      align-items: center;
+      justify-content: space-between;
+      margin-top: 8px;
+    }
+    button {
+      background: #4f8cff;
+      color: #fff;
+      border: none;
+      padding: 10px 0;
+      border-radius: 8px;
+      font-size: 16px;
+      font-weight: 600;
+      cursor: pointer;
+      flex: 1;
+      transition: background 0.2s;
+    }
+    button:hover {
+      background: #2563eb;
+    }
+    a.button {
+      display: inline-block;
+      padding: 10px 14px;
+      border: 1px solid #4f8cff;
+      border-radius: 8px;
+      text-decoration: none;
+      color: #4f8cff;
+      font-weight: 600;
+      background: #f5f7fa;
+      transition: background 0.2s, color 0.2s;
+    }
+    a.button:hover {
+      background: #4f8cff;
+      color: #fff;
+    }
+  </style>
+</head>
+<body>
+  <div class="container">
+    <h2>Inicio de sesión</h2>
+
+    <% if (error) { %>
+      <div class="err"><%= error %></div>
+    <% } %>
+
+    <form action="/ingresar" method="POST" autocomplete="off">
+      <div>
+        <label>Usuario</label>
+        <input type="text" name="usuario" required />
+      </div>
+      <div>
+        <label>Contraseña</label>
+        <input type="password" name="clave" required />
+      </div>
+      <div class="row">
+        <button type="submit">Ingresar</button>
+        <a class="button" href="/registro">Crear cuenta</a>
+      </div>
+    </form>
+  </div>
+</body>
+</html>

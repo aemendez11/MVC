@@ -1,0 +1,14 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8" />
+  <title>Panel</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <style>body{font-family:system-ui;max-width:620px;margin:40px auto;padding:0 16px}</style>
+</head>
+<body>
+  <h2>Bienvenido, <%= typeof usuario !== 'undefined' ? usuario : 'usuario' %> 👋</h2>
+  <p>Sesión iniciada correctamente.</p>
+  <p><a href="/salir">Cerrar sesión</a></p>
+</body>
+</html>

@@ -1,0 +1,12 @@
+[
+  {
+    "usuario": "alex",
+    "correo": "alex@example.com",
+    "claveHash": "$2b$10$.FBEsGkx7vF0qmQ3IIGUVuYojhhLypd5hzOJDhJkXQDo9z9qQWJZ6"
+  },
+  {
+    "usuario": "admin",
+    "correo": "admin@example.com",
+    "claveHash": "$2b$10$O3szxeM2hNrsiGaWEl37zOaL4BH6m9U8EnCyFfFwtDitzvPANH0Gu"
+  }
+]
